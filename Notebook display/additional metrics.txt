@@ -1,0 +1,9 @@
+voting_clf.fit(X_train, y_train)
+preds = voting_clf.predict(X_test)
+acc = accuracy_score(y_test, preds)
+l_loss = log_loss(y_test, preds)
+f1 = f1_score(y_test, preds)
+
+print("Accuracy is: " + str(acc))
+print("Log Loss is: " + str(l_loss))
+print("F1 Score is: " + str(f1))
